@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" name="" id="input-value">
+<button onclick="add_element_to_array()" >Add</button>
+<button onclick="display_array()">Display</button>
+<button onclick="checkArray()">Check</button>
+<div id="result"></div>
+</body>
+</html>
+<script>
+    let x=0;
+    let myArray = Array();
+    function add_element_to_array(){
+         myArray[x]= document.getElementById("input-value").value;
+         x++;
+         document.getElementById('input-value').value=" "
+    }
+    function display_array(){
+        let e="</hr>"
+        for (let i=0;i<myArray.length;i++){
+          e+= myArray[i]+"</br>";
+        }
+        document.getElementById("result").innerHTML=e
+    }
+    function checkArray(){
+        let a= prompt("nhap 1 gia tri");
+        for (let j =0;j<e.length;j++){
+            if(a===myArray[j]){
+                alert("tm dk")
+            }
+            else{
+                alert("k tm dk ")
+            }
+        }
+    }
+    // let arrayNumber = [4,2,6,5,9,8,12,9,10]
+    // let max =arrayNumber[0];
+    // for(let i=1;i<arrayNumber.length;i++){
+    //     if(arrayNumber[i]>max){
+    //         max=arrayNumber[i];
+    //     }
+    // }
+    // alert("max cua mang la"+max);
+</script>
